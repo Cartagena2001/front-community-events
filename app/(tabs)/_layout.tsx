@@ -1,12 +1,12 @@
+import { Nav } from '@/components/Nav';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useAuth } from '@/context/AuthContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default function TabLayout() {
   const [userName, setUserName] = useState('');
-  const { logout } = useAuth();
 
   useEffect(() => {
     getUserData();
@@ -27,13 +27,59 @@ export default function TabLayout() {
   return (
     <ProtectedRoute>
       <View style={styles.container}>
-        <Text style={styles.welcomeText}>
-          Bienvenido {userName} al sistema para gestionar eventos
-        </Text>
-        
-        <TouchableOpacity style={styles.logoutButton} onPress={logout}>
-          <Text style={styles.logoutText}>Cerrar Sesión</Text>
-        </TouchableOpacity>
+        <Nav userName={userName} />
+        <View style={styles.content}>
+          <Stack>
+            <Stack.Screen 
+              name="index"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen 
+              name="create-event" 
+              options={{
+                title: 'Create Event',
+                headerShown: true,
+              }}
+            />
+            <Stack.Screen 
+              name="events" 
+              options={{
+                title: 'Events',
+                headerShown: true,
+              }}
+            />
+            <Stack.Screen 
+              name="participations" 
+              options={{
+                title: 'My Participations',
+                headerShown: true,
+              }}
+            />
+            <Stack.Screen 
+              name="history" 
+              options={{
+                title: 'History',
+                headerShown: true,
+              }}
+            />
+            <Stack.Screen 
+              name="statistics" 
+              options={{
+                title: 'Statistics',
+                headerShown: true,
+              }}
+            />
+            <Stack.Screen 
+              name="view-event/[id]" 
+              options={{
+                title: 'View Event',
+                headerShown: true,
+              }}
+            />
+          </Stack>
+        </View>
       </View>
     </ProtectedRoute>
   );
@@ -42,26 +88,9 @@ export default function TabLayout() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
+    backgroundColor: '#f5f5f5',
   },
-  welcomeText: {
-    fontSize: 24,
-    textAlign: 'center',
-    marginBottom: 30,
-    fontWeight: 'bold',
-  },
-  logoutButton: {
-    backgroundColor: '#FF3B30',
-    padding: 15,
-    borderRadius: 8,
-    width: 200,
-    alignItems: 'center',
-  },
-  logoutText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
+  content: {
+    flex: 1,
   },
 });
