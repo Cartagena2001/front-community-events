@@ -21,6 +21,7 @@ Esta aplicación móvil, desarrollada con *React Native*, facilita la creación,
 - 💻 *Repositorio Backend:* https://github.com/Cartagena2001/api-community-events  
 - 📱 *Repositorio Frontend:* https://github.com/Cartagena2001/front-community-events  
 - 📋 *Tablero Trello / Notion:* https://www.notion.so/Proyecto-en-React-Native-2055b4c8fb1c80db86d7e75434334094?source=copy_link
+- 🎨 *Mockups:* https://www.figma.com/design/vRlV0uQ5E4BsktFmcF1mYA/eventos?node-id=0-1&t=3xENJAAzxiIa3pib-1 
 - 📄 *Licencia Creative Commons:* 
     community-events  by Guillermo Cartagena is marked CC0 1.0 Universal. To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
 
