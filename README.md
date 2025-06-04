@@ -24,4 +24,5 @@ Esta aplicación móvil, desarrollada con *React Native*, facilita la creación,
 - 🎨 *Mockups:* https://www.figma.com/design/vRlV0uQ5E4BsktFmcF1mYA/eventos?node-id=0-1&t=3xENJAAzxiIa3pib-1 
 - 📄 *Licencia Creative Commons:* 
     community-events  by Guillermo Cartagena is marked CC0 1.0 Universal. To view a copy of this mark, visit https://creativecommons.org/publicdomain/zero/1.0/
+- 🎥 *Enlace Video Defensa:* https://drive.google.com/drive/folders/1e5M3dlKj4a6sdxHD3Ra8t5uQB3r8QNJl?usp=sharing
 
